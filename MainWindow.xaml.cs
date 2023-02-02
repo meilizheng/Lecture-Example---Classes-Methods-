@@ -20,9 +20,23 @@ namespace Lecture_Example___Classes___Methods__
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Student> students = new List<Student>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            string FirstName = txtFirstName.Text;
+            string LastName = txtLastName.Text;
+            double CSI = double.Parse(txtCSI.Text);
+            double GenED = double.Parse(txtGenEd.Text);
+            //Add student to student list;
+            students.Add(new Student(FirstName, LastName, CSI, GenED));
+            //display student in student list;
+            Student s = students[0];
+            runDisplay1.Text = s.FirstName + " " + s.LastName + " " + s.GenEdGrade + " " + s.CsiGrade;
         }
     }
 }
