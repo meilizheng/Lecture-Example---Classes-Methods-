@@ -25,5 +25,10 @@ namespace Lecture_Example___Classes___Methods__
         public string LastName { get => lastName; set => lastName = value; }
         public double CsiGrade { get => csiGrade; set => csiGrade = value; }
         public double GenEdGrade { get => genEdGrade; set => genEdGrade = value; }
+
+        public override string ToString()
+        {
+            return $"{this.firstName} {this.lastName} - CSI Grade: {this.csiGrade} - GenED Grade: {this.genEdGrade}";
+        }//To string;
     }
 }

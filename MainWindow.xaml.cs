@@ -35,8 +35,9 @@ namespace Lecture_Example___Classes___Methods__
             //Add student to student list;
             students.Add(new Student(FirstName, LastName, CSI, GenED));
             //display student in student list;
+            //use dot operator to acess member inside of the instanced class;
             Student s = students[0];
-            runDisplay1.Text = s.FirstName + " " + s.LastName + " " + s.GenEdGrade + " " + s.CsiGrade;
+            runDisplay1.Text = s.ToString();
         }
     }
 }
