@@ -21,12 +21,32 @@ namespace Lecture_Example___Classes___Methods__
     public partial class MainWindow : Window
     {
         List<Student> students = new List<Student>();
+        Course csi122;
         public MainWindow()
         {
             InitializeComponent();
+            csi122 = new Course("CSI 122", "Will Cram");
         }
 
         private void btnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            //display student in student list;           
+            AddStudentToList();            
+            int lastStudentEntered = students.Count - 1;
+            Student lastStudent = students[lastStudentEntered];
+            runDisplay1.Text = "";
+            runDisplay1.Text = "csi122.Course.Name" + " " + csi122.Teacher +"\n";
+
+            foreach (Student student in csi122.ClassRoster)
+            {
+                runDisplay1.Text += student + "\n";
+            }
+
+            csi122.EnrollStudent(lastStudent);
+
+            //DisplayStudetns();
+        }
+        public void AddStudentToList()
         {
             string FirstName = txtFirstName.Text;
             string LastName = txtLastName.Text;
@@ -34,10 +54,17 @@ namespace Lecture_Example___Classes___Methods__
             double GenED = double.Parse(txtGenEd.Text);
             //Add student to student list;
             students.Add(new Student(FirstName, LastName, CSI, GenED));
-            //display student in student list;
             //use dot operator to acess member inside of the instanced class;
-            Student s = students[0];
-            runDisplay1.Text = s.ToString();
+        }
+
+        public void DisplayStudetns() 
+        {
+            //clear the display;
+            runDisplay1.Text = "";
+            for (int i = 0; i < students.Count; i++)
+            {
+                runDisplay1.Text += students[i] + "\n";
+            }
         }
     }
 }
