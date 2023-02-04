@@ -53,13 +53,11 @@ namespace Lecture_Example___Classes___Methods__
         //Review: What’s the name for any field, constructor, property or method that is part of a class?
         //They are a member of a class.
 
-        //What keyword allows you to access members related to the specific instance?
+        //What keyword allows you to access members related to the specific instance? "public" keyword allows you to access member related to the specific instance.
 
-        //A method build inside a class has access to what, even it’s access modifier is set to private?
+        //A method build inside a class has access to what, even it’s access modifier is set to private? class;
 
         //What does “override .ToString()” allow us to do?
-
-
-
+       // Overriding ToString() allows you to give a useful human-readable string representation of a class. 
     }
 }

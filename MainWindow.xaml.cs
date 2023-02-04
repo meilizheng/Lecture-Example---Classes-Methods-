@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//Meili Zheng;
+//02/01/2023;
+//Lecture Example Class(Methods);
 
 namespace Lecture_Example___Classes___Methods__
 {
@@ -36,6 +39,7 @@ namespace Lecture_Example___Classes___Methods__
             Student lastStudent = students[lastStudentEntered];
             runDisplay1.Text = "";
             runDisplay1.Text = "csi122.Course.Name" + " " + csi122.Teacher +"\n";
+            MessageBox.Show(csi122.RosterAverage().ToString());
 
             foreach (Student student in csi122.ClassRoster)
             {
@@ -54,6 +58,8 @@ namespace Lecture_Example___Classes___Methods__
             double GenED = double.Parse(txtGenEd.Text);
             //Add student to student list;
             students.Add(new Student(FirstName, LastName, CSI, GenED));
+
+            //You use the* ____ operator * do you use to access members inside of an instanced class?
             //use dot operator to acess member inside of the instanced class;
         }
 
